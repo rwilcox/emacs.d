@@ -146,9 +146,10 @@
  '(ede-project-directories
    (quote
     ("/home/aias/Development/_Products/WD_Site_Related/blog/gatsby-wd-blog")))
+ '(markdown-list-indent-width 2)
  '(package-selected-packages
    (quote
-    (xterm-color visual-regexp-steroids regex-tool rainbow-blocks imake devdocs color-theme-sanityinc-solarized base16-theme))))
+    (markdown-mode xterm-color visual-regexp-steroids regex-tool rainbow-blocks imake devdocs color-theme-sanityinc-solarized base16-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
