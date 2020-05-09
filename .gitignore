@@ -1,6 +1,8 @@
 eshell
 thumbs
 *.*~
-elpha
+elpa/
 ede-projects.el
 auto-save-list
+recentf?
+srecode-map.el
