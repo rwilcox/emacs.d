@@ -10,10 +10,29 @@
 (require 'em-smart)
 (require 'package)
 (require 're-builder)
+(require 'eshell) ; or use with-eval-after-load
 
 (package-initialize)
 
+;; This is only needed once, near the top of the file
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  ;; (add-to-list 'load-path "<path where use-package is installed>")
+  (require 'use-package))
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (add-to-list 'package-archives (cons "melpa" (concat "https" "://melpa.org/packages/")) t)
+
+(use-package markdown-mode)
+(use-package xterm-color)
+(use-package regex-tool)
+(use-package rainbow-blocks)
+(use-package imake)
+(use-package devdocs)
+(use-package color-theme-sanityinc-solarized)
+(use-package base16-theme)
 
 ;(add-to-list 'package-archives
 ;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -28,7 +47,7 @@
 
 ;; You can also use it with eshell (and thus get color output from system ls):
 
-(require 'eshell) ; or use with-eval-after-load
+
 
 (add-hook 'eshell-before-prompt-hook
           (lambda ()
@@ -147,9 +166,9 @@
    (quote
     ("/home/aias/Development/_Products/WD_Site_Related/blog/gatsby-wd-blog")))
  '(markdown-list-indent-width 2)
- '(package-selected-packages
-   (quote
-    (markdown-mode xterm-color visual-regexp-steroids regex-tool rainbow-blocks imake devdocs color-theme-sanityinc-solarized base16-theme))))
+ '(package-selected-packages)
+ )
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
