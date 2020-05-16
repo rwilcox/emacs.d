@@ -3,6 +3,24 @@
 (defun rpw/current-region ()
   (buffer-substring-no-properties (region-beginning) (region-end)))
 
+
+(defun bb/new-empty-text-buffer ()
+  "Create a new empty buffer.
+New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
+
+It returns the buffer (for elisp programing).
+
+URL `http://ergoemacs.org/emacs/emacs_new_empty_buffer.html'
+Version 2017-11-01"
+  (interactive)
+  (let (($buf (generate-new-buffer "untitled")))
+    (switch-to-buffer $buf)
+    (funcall initial-major-mode)
+    (setq buffer-offer-save t)
+    $buf
+    ))
+
+  
 (defun bb/filter-region-through-shell-command ()
   "Like BBEdit's Text Filters, but the command is selected at runtime. Also I can never remember the universal modifier"
   (interactive)
@@ -24,8 +42,7 @@
   (current-region-to-shell-file)
   (let ((current-command (read-string "run command (will be piped the current region): ")))
     (run-this-in-eshell (concat "cat /tmp/current-region | " current-command))
-  )
-)
+  ))
 
 (defun rpw/exec-only-current-eshell-region ()
   "you're taken the output from a previus command, maybe typed some more but maybe not, and want to run it. Make that easy"
