@@ -33,10 +33,12 @@
 (use-package devdocs)
 (use-package color-theme-sanityinc-solarized)
 (use-package base16-theme)
+(use-package persistent-scratch)
 
 ;(add-to-list 'package-archives
 ;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(persistent-scratch-setup-default)
 
 (add-hook 'eshell-mode-hook
   (lambda ()
