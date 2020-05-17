@@ -60,6 +60,12 @@ Version 2017-11-01"
     ))
 
 
+(defun bb/current-region-to-tmp-current-region-file ()
+  (interactive)
+  (current-region-to-shell-file)
+ )
+
+
 (defun current-region-to-shell-file ()
     ; must have ln at end, but write-region by default does not
     (write-region
