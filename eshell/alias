@@ -1,1 +1,2 @@
+alias bb find-file $1
 alias win_pshic Powershell -Command "$1"
