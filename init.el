@@ -21,6 +21,8 @@
 
 (package-initialize)
 
+(add-to-list 'package-archives (cons "melpa" (concat "https" "://melpa.org/packages/")) t)
+
 ;; This is only needed once, near the top of the file
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
@@ -43,6 +45,7 @@
 (use-package base16-theme)
 (use-package persistent-scratch)
 (use-package literate-calc-mode)
+(use-package swiper)
 
 ;(add-to-list 'package-archives
 ;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -105,6 +108,10 @@
   [menu-bar mymenu sova]
   '("Soulver: Evaluate buffer, append soulver-output" . soulver/script-eval-elisp-and-append-output-variable))
 
+(define-key
+  global-map
+  [menu-bar mymenu fall]
+  '("Swiper: Find All" . swiper))
 
 ;; ================================================ END RPW Menu =======================
  (eval-after-load 'esh-opt
@@ -129,7 +136,7 @@
  '(markdown-list-indent-width 2)
  '(package-selected-packages
    (quote
-    (literate-calc-mode xterm-color use-package regex-tool rainbow-blocks markdown-mode imake devdocs color-theme-sanityinc-solarized base16-theme))))
+    (swiper literate-calc-mode xterm-color use-package regex-tool rainbow-blocks markdown-mode imake devdocs color-theme-sanityinc-solarized base16-theme))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
