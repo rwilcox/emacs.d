@@ -46,6 +46,7 @@
 (use-package persistent-scratch)
 (use-package literate-calc-mode)
 (use-package swiper)
+(use-package powershell)
 
 ;(add-to-list 'package-archives
 ;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -136,7 +137,7 @@
  '(markdown-list-indent-width 2)
  '(package-selected-packages
    (quote
-    (swiper literate-calc-mode xterm-color use-package regex-tool rainbow-blocks markdown-mode imake devdocs color-theme-sanityinc-solarized base16-theme))))
+    (powershell swiper literate-calc-mode xterm-color use-package regex-tool rainbow-blocks markdown-mode imake devdocs color-theme-sanityinc-solarized base16-theme))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
