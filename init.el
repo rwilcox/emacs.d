@@ -138,6 +138,9 @@
  '(package-selected-packages
    (quote
     (powershell swiper literate-calc-mode xterm-color use-package regex-tool rainbow-blocks markdown-mode imake devdocs color-theme-sanityinc-solarized base16-theme))))
+ '(speedbar-supported-extension-expressions
+   (quote
+    (".ps1?" ".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".md" ".el" ".emacs" ".l" ".lsp" ".p" ".java" ".js" ".f\\(90\\|77\\|or\\)?" ".ad[abs]" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".g" ".s?html" ".ma?k" "[Mm]akefile\\(\\.in\\)?"))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
