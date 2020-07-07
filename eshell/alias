@@ -1,4 +1,5 @@
-alias to_echo message $1 > /dev/null
-alias pshic pwsh --NonInteractive -Command "$*"
-alias win_pshic Powershell -Command "$*"
+alias esh source $1
 alias bb find-file $1
+alias win_pshic Powershell -Command "$*"
+alias pshic pwsh --NonInteractive -Command "$*"
+alias to_echo message $1 > /dev/null
