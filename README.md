@@ -6,3 +6,5 @@ For now:
   * see my init.el file <-- where I set up my environment and set my tweaks
   * [My Emacs Cheatsheet](https://github.com/rwilcox/my-learnings-docs/blob/master/learning_emacs_cheatsheet.md)
   * [My eshell notes](https://github.com/rwilcox/my-learnings-docs/blob/master/learning_emacs_shell_interactions.md) <-- ever wanted a super portable shell (because it's re-implemented in lisp?)? Ever wanted integration with your editor (because really, sometimes you want to grab the mouse and click in the middle of that line?). Ever wanted to pipe something directly to your text editor, to do super text surgery on it (vs remembering sed?). Ever wanted a really good terminal emulator on OSes that don't have one? Emacs.
+
+I use a slighty customized version of the [mousemacs](https://github.com/corvideon/mousemacs) configuration.
