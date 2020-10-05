@@ -85,7 +85,8 @@
 (setq auto-compile-mode-line-counter t)
 
 ;; hide compilation buffers on finish compiling
-(add-hook 'compilation-finish-functions (lambda (buf strg) (kill-buffer buf)))
+; (add-hook 'compilation-finish-functions (lambda (buf strg) (kill-buffer buf)))
+;; RPW turns this off! Why would this be turned on, even for auto-compile? RPW 09-30-2020
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Reset Emacs!!
@@ -224,7 +225,8 @@
 (load custom-file 'noerror)
 
 ;; start with a maximised window
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+; RPW 09/30/2020 <-- nope
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; GUI Hooks here
@@ -313,7 +315,8 @@ prompt before closing."
 
 (defun daisymacs-emacs-startup-hook ()
   (daisymacs-close-scratch))
-(add-hook 'emacs-startup-hook 'daisymacs-emacs-startup-hook)
+; (add-hook 'emacs-startup-hook 'daisymacs-emacs-startup-hook)
+; RPW - do not close scratch either
 
 ;; open a new empty buffer
 (defun new-untitled-buffer ()
