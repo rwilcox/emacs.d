@@ -224,7 +224,8 @@
 (load custom-file 'noerror)
 
 ;; start with a maximised window
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+; RPW - no.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; GUI Hooks here
@@ -307,9 +308,11 @@ prompt before closing."
 
 ;; close the scratch buffer on startup
 (defun daisymacs-close-scratch ()
-  (kill-buffer "*scratch*")
-  (if (not (delq nil (mapcar 'buffer-file-name (buffer-list))))
-      (new-untitled-buffer)))
+  ;; RPW: no
+  ; (kill-buffer "*scratch*")
+  ; (if (not (delq nil (mapcar 'buffer-file-name (buffer-list))))
+                                        ;    (new-untitled-buffer)))
+  )
 
 (defun daisymacs-emacs-startup-hook ()
   (daisymacs-close-scratch))
