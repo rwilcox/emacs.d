@@ -29,3 +29,9 @@
   global-map
   [menu-bar mymenu fall]
   '("Find All" . occur))
+
+
+(define-key
+  global-map
+  [menu-bar mymenu keysz]
+  '("Minor Mode Keys" . which-key-show-major-mode))

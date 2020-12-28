@@ -17,5 +17,15 @@
 (use-package swiper)
 (use-package powershell)
 (use-package groovy-mode)
+
 (use-package hl-todo)
 (use-package projectile)
+
+(use-package which-key
+  :config
+  (which-key-mode)
+  (which-key-setup-side-window-bottom)
+  :custom (which-key-idle-delay 1.2))
+
+(setq which-key-popup-type 'frame)
+(setq which-key-persistent-popup t)
