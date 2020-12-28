@@ -11,3 +11,5 @@
 (use-package swiper)
 (use-package powershell)
 (use-package groovy-mode)
+(use-package hl-todo)
+(use-package projectile)
