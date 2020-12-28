@@ -19,3 +19,4 @@
 
 (load (concat user-emacs-directory "packages-mine.el"))
 (load (concat user-emacs-directory "custom.el"))
+(load (concat user-emacs-directory "boot-after-packages.el"))
