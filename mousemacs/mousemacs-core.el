@@ -519,12 +519,12 @@ prompt before closing."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package tabbar
-        :ensure t
-  :config
-  (tabbar-mode t))
+        :ensure t)
+;  :config
+;  (tabbar-mode t))
 
 ;; tabs by default
-(tabbar-mode t)
+;(tabbar-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mousemacs tabbar config.
