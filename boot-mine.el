@@ -10,6 +10,8 @@
 (require 'eshell-mine)
 (require 'menus-mine)
 (require 'macros-mine)
+(require 'java-config-mine)
+(require 'editing-extensions)
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)

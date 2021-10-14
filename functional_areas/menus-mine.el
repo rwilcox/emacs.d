@@ -30,8 +30,32 @@
   [menu-bar mymenu fall]
   '("Find All" . occur))
 
+(define-key
+  global-map
+  [menu-bar mymenu fprgrep]
+  '("rg" . rg))
+
+(define-key
+  global-map
+  [menu-bar mymenu twrap]
+  '("Toggle World Wrap" . toggle-truncate-lines))
+
+(define-key
+  global-map
+  [menu-bar mymenu jdke]
+  '("Use JDK 8" . jdk-8-development))
+
+(define-key
+  global-map
+  [menu-bar mymenu jdkne]
+  '("Use JDK 11" . jdk-11-development))
 
 (define-key
   global-map
   [menu-bar mymenu keysz]
   '("Minor Mode Keys" . which-key-show-major-mode))
+
+(define-key
+  global-map
+  [menu-bar mymenu tabuf]
+  '("I want to use tabs for whitespace" . rpw/really-i-want-to-use-a-tab-key-here))

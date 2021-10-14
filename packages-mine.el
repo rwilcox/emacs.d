@@ -29,3 +29,8 @@
 
 (setq which-key-popup-type 'frame)
 (setq which-key-persistent-popup t)
+
+
+(use-package rg)
+
+(rg-enable-default-bindings)
