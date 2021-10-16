@@ -34,3 +34,11 @@
 (use-package rg)
 
 (rg-enable-default-bindings)
+(use-package plantuml-mode)
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
+;(use-package company-graphviz-dot
+;  )
