@@ -9,6 +9,7 @@
 (require 'bbedit)
 (require 'eshell-mine)
 (require 'menus-mine)
+(require 'macros-mine)
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)

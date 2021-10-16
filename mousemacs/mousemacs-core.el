@@ -211,7 +211,8 @@
 (setq linum-format " %3d ")
 
 ;; reload a file if changed in external program
-(global-auto-revert-mode t)
+;(global-auto-revert-mode t)
+;; RPW this is a bit of danger but I want to make the choice in these situations.
 
 ;; change frame title to full path
 (setq frame-title-format
@@ -519,12 +520,12 @@ prompt before closing."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package tabbar
-        :ensure t
-  :config
-  (tabbar-mode t))
+        :ensure t)
+;  :config
+;  (tabbar-mode t))
 
 ;; tabs by default
-(tabbar-mode t)
+;(tabbar-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mousemacs tabbar config.

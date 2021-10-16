@@ -31,3 +31,10 @@
 (setq which-key-persistent-popup t)
 
 (use-package plantuml-mode)
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
+;(use-package company-graphviz-dot
+;  )
