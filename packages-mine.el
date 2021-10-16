@@ -29,3 +29,5 @@
 
 (setq which-key-popup-type 'frame)
 (setq which-key-persistent-popup t)
+
+(use-package plantuml-mode)
