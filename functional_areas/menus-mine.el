@@ -17,6 +17,12 @@
 
 (define-key
   global-map
+  [menu-bar mymenu wwt]
+  '("Timezone Conversion" . wwtime/in-new-buffer)
+  )
+
+(define-key
+  global-map
   [menu-bar mymenu im]
   '("iMake" . imake))
 

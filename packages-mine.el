@@ -16,6 +16,7 @@
 (use-package literate-calc-mode)
 (use-package swiper)
 (use-package powershell)
+(use-package wwtime)
 (use-package groovy-mode)
 
 (use-package hl-todo)

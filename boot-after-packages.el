@@ -3,3 +3,4 @@
 (require 'plantuml-mine)
 (require 'graphviz-mine)
 (require 'python-mine)
+(require 'wwtime-mine)
