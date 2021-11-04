@@ -8,6 +8,7 @@
 
 (add-to-list 'load-path (expand-file-name "vendor" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "functional_areas" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "machine-configs" user-emacs-directory))
 
 (load (concat user-emacs-directory "boot-mine.el"))
 
