@@ -1,0 +1,1 @@
+(provide 'home-lan-config)
