@@ -3,3 +3,4 @@ alias bb find-file $1
 alias win_pshic Powershell -Command "$*"
 alias pshic pwsh --NonInteractive -Command "$*"
 alias to_echo message $1 > /dev/null
+alias ehist eshell-list-history
