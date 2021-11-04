@@ -9,6 +9,11 @@
   (cons "RPW" (make-sparse-keymap "hoot hoot"))
   'tools )
 
+(define-key
+  global-map
+  [menu-bar mymenu cms]
+  '("Toggle Autocomplete Popup" . company-mode)
+)
 ;; Creating a menu item, under the menu by the id “[menu-bar mymenu]”
 (define-key
   global-map
