@@ -1,0 +1,1 @@
+(provide 'virotutis-lan-config)
