@@ -11,16 +11,16 @@
   "Setup our Java 11 paths and env variables correctly"
   (interactive)
 
-  (setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home")
-  (setenv "PATH" (concat  "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/" (getenv "PATH") ) )
-  (setq eshell-path-env (concat "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/" ";" eshell-path-env) )
+  (setenv "JAVA_HOME" java-11-home)
+  (setenv "PATH" (concat java-11-binpath (getenv "PATH") ) )
+  (setq eshell-path-env (concat java-11-binpath eshell-path-env) )
 )
 
 
 (defun jdk-8-development()
   "Set up our Java 8 paths and env variables correctly"
   (interactive)
-  (setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home")
-  (setenv "PATH" (concat  "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/" (getenv "PATH") ) )
-  (setq eshell-path-env (concat "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin" ";" eshell-path-env) )
+  (setenv "JAVA_HOME" java-8-home)
+  (setenv "PATH" (concat  java-8-binpath (getenv "PATH") ) )
+  (setq eshell-path-env (concat java-8-binpath eshell-path-env) )
 )
