@@ -499,22 +499,30 @@ prompt before closing."
 ;;; NeoTree file explorer
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-package neotree
-  :ensure t
-  :config
-  (setq neo-window-width 45)
-  ;; auto open on current file
-  (setq neo-smart-open t)
-  ;; hide hidden files
-  (setq-default neo-show-hidden-files nil))
+;(use-package neotree
+;  :ensure t
+;  :config
+;  (setq neo-window-width 45)
+;  ;; auto open on current file
+;  (setq neo-smart-open t)
+;  ;; hide hidden files
+;  (setq-default neo-show-hidden-files nil))
 
 ;; show the file explorer at startup
 ;;(neotree-toggle)
 
-(tool-bar-add-item "home" 'neotree-toggle
+;(tool-bar-add-item "home" 'neotree-toggle
+;               'Files
+;               :help   "Toggle File Explorer")
+
+(use-package dired-subtree)
+(use-package dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
+
+(tool-bar-add-item "home" 'dired-sidebar-toggle-sidebar
                'Files
                :help   "Toggle File Explorer")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Tabbar for mousemacs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
