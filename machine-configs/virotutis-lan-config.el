@@ -8,3 +8,6 @@
 
 (setq java-8-home     "/Library/Java/JavaVirtualMachines/openjdk8-zulu/Contents/Home")
 (setq java-8-binpath  (concat "/Library/Java/JavaVirtualMachines/openjdk8-zulu/Contents/Home/bin: eshell-path-env"))
+
+
+(setq lsp-clients-kotlin-server-executable "/Users/rwilcox/bin/install/server/bin/kotlin-language-server")
