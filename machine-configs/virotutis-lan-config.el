@@ -1,8 +1,5 @@
 (provide 'virotutis-lan-config)
 
-(provide 'home-lan-config)
-
-
 (setq java-11-home    "/Library/Java/JavaVirtualMachines/openjdk11-zulu/Contents/Home")
 (setq java-11-binpath (concat "/Library/Java/JavaVirtualMachines/openjdk11-zulu/Contents/Home/bin/:" eshell-path-env) )
 
