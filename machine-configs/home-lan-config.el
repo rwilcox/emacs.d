@@ -8,3 +8,5 @@
 (setq java-8-binpath  (concat "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin:" eshell-path-env))
 
 (setq lsp-clients-kotlin-server-executable "/Users/aias/bin/install/server/bin/kotlin-language-server")
+
+(setq rg-executable "/opt/local/bin/rg")
