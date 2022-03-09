@@ -96,3 +96,6 @@
 (use-package kotlin-mode
   :hook
   (kotlin-mode . lsp))
+(use-package direnv
+ :config
+ (direnv-mode))
