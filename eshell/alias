@@ -1,4 +1,6 @@
-alias esh source $1
+alias esh . $1
+# ^^^ in eshell source loads information into a subshell, . does it in this one
+
 alias bb find-file $1
 alias win_pshic Powershell -Command "$*"
 alias pshic pwsh --NonInteractive -Command "$*"
