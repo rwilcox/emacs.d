@@ -20,9 +20,10 @@
 (define-key (current-global-map) (kbd "C-o") nil)
 (bind-key* (kbd "C-o") 'counsel-find-file)
 
+;; RPW: prefer C-k = kill until end of line
 ;; close file buffer
-(define-key (current-global-map) (kbd "C-k") nil)
-(bind-key* (kbd "C-k") ' kill-buffer )
+;(define-key (current-global-map) (kbd "C-k") nil)
+;(bind-key* (kbd "C-k") ' kill-buffer )
 
 ;; open buffer list
 (define-key (current-global-map) (kbd "C-S-b") nil)

@@ -10,3 +10,4 @@ srecode-map.el
 .persistent-scratch
 var/
 session.*
+url/cache/*
