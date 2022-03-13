@@ -1,8 +1,8 @@
+# alias mvn mvn.cmd "$*"
+alias ehist eshell-list-history
+alias to_echo message $1 > /dev/null
+alias pshic pwsh --NonInteractive -Command "$*"
+alias win_pshic Powershell -Command "$*"
+alias bb find-file $1
 alias esh . $1
 # ^^^ in eshell source loads information into a subshell, . does it in this one
-
-alias bb find-file $1
-alias win_pshic Powershell -Command "$*"
-alias pshic pwsh --NonInteractive -Command "$*"
-alias to_echo message $1 > /dev/null
-alias ehist eshell-list-history
