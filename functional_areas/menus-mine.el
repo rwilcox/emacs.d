@@ -11,6 +11,12 @@
 
 (define-key
   global-map
+  [menu-bar mymenu dird]
+  '("Reveal current buffer in dired" . dired-jump-other-window)
+  )
+
+(define-key
+  global-map
   [menu-bar mymenu cms]
   '("Toggle Autocomplete Popup" . company-mode)
 )
