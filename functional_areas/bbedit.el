@@ -20,7 +20,7 @@ Version 2017-11-01"
     $buf
     ))
 
-  
+
 (defun bb/filter-region-through-shell-command ()
   "Like BBEdit's Text Filters, but the command is selected at runtime. Also I can never remember the universal modifier"
   (interactive)
@@ -30,7 +30,7 @@ Version 2017-11-01"
 (defun bb/script-eval-selected-in-eshell ()
   "Like BBEdit's script functionality, but (a) command is selected at runtime by looking at the region. Either switch to the eshell buffer OR use the fancy eshell redirection properties to get the output out."
   (interactive)
-  (let ((oldbuff (current-buffer))) 
+  (let ((oldbuff (current-buffer)))
     (run-this-in-eshell
      (buffer-substring-no-properties (region-beginning) (region-end)))
   ))
@@ -49,6 +49,14 @@ Version 2017-11-01"
      (interactive)
      (run-this-in-eshell (rpw/current-region)))
 
+(defun bbedit/script-result-here-native ()
+ "executes native - not eshell - command and puts result in current buffer
+  aka macros version of https://stackoverflow.com/a/12306709"
+  (interactive)
+  (let ((current-prefix-arg 4)) ;; emulate C-u
+    (call-interactively 'shell-command) ;; invoke align-regexp interactively
+    )
+  )
 
 (defun run-this-in-eshell (cmd)
   "Runs the command 'cmd' in eshell."
