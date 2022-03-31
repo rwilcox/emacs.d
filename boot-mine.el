@@ -22,6 +22,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+(global-hl-line-mode +1) ; highlight the current line
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
