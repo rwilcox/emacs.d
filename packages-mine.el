@@ -96,6 +96,13 @@
 (use-package kotlin-mode
   :hook
   (kotlin-mode . lsp))
+
 (use-package direnv
  :config
  (direnv-mode))
+
+(use-package yaml-mode)
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(use-package highlight-indent-guides)
