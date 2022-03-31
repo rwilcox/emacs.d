@@ -1,7 +1,7 @@
 (provide 'wwtime-mine)
 
-; (setq wwtime-display '("EDT" "PDT" "GMT"))
-(setq wwtime-display '("EST" "PST" "GMT"))
+(setq wwtime-display '("EDT" "PDT" "GMT"))
+; (setq wwtime-display '("EST" "PST" "GMT"))
 
                                         ; ^^^ ugh need to flip this every 6 months or whatever. Boo.
 
