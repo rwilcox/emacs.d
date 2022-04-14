@@ -19,3 +19,8 @@
            "@ L: %l C: %C "
            "(%Z)"
           ))
+
+
+
+(setq company-idle-delay nil)
+(global-set-key (kbd "C-.") 'company-complete)
