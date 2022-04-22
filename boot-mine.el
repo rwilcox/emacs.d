@@ -12,6 +12,7 @@
 (require 'macros-mine)
 (require 'java-config-mine)
 (require 'editing-extensions)
+(require 'window-extensions)
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
