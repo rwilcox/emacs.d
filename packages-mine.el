@@ -116,3 +116,5 @@
   (global-set-key (kbd "<left-fringe> <mouse-3>") 'bm-toggle-mouse)
   (setq bm-highlight-style "bm-highlight-only-fringe")  ;; can also be -only-line
 )
+
+(use-package dash-at-point)
