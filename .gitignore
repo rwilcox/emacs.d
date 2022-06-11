@@ -11,3 +11,4 @@ srecode-map.el
 var/
 session.*
 url/cache/*
+.cache/*
