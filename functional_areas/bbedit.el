@@ -21,6 +21,13 @@ Version 2017-11-01"
     ))
 
 
+(defun bb/info-show-path-to-file ()
+  "Just shows you the file path in the message / minibuffer thing, for when you just need it this instant"
+  (interactive)
+
+  (message (file-name-directory buffer-file-name)))
+
+
 (defun bb/filter-region-through-shell-command ()
   "Like BBEdit's Text Filters, but the command is selected at runtime. Also I can never remember the universal modifier"
   (interactive)
