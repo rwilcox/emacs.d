@@ -108,3 +108,14 @@
 (use-package highlight-indent-guides)
 
 (use-package string-inflection)
+(use-package bm
+  :ensure t
+  :demand t
+
+  :init
+  :config
+  (global-set-key (kbd "<left-fringe> <mouse-3>") 'bm-toggle-mouse)
+  (setq bm-highlight-style "bm-highlight-only-fringe")  ;; can also be -only-line
+)
+
+(use-package dash-at-point)

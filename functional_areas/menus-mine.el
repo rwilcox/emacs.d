@@ -37,15 +37,15 @@
   [menu-bar mymenu im]
   '("iMake" . imake))
 
-(define-key
-  global-map
-  [menu-bar mymenu sova]
-  '("Soulver: Evaluate buffer, append soulver-output" . soulver/script-eval-elisp-and-append-output-variable))
+;(define-key
+;  global-map
+;  [menu-bar mymenu sova]
+;  '("Soulver: Evaluate buffer, append soulver-output" . soulver/script-eval-elisp-and-append-output-variable))
 
-(define-key
-  global-map
-  [menu-bar mymenu fall]
-  '("Find All" . occur))
+;(define-key
+;  global-map
+;  [menu-bar mymenu fall]
+;  '("Find All" . occur))
 
 (define-key
   global-map
@@ -76,3 +76,8 @@
   global-map
   [menu-bar mymenu tabuf]
   '("I want to use tabs for whitespace" . rpw/really-i-want-to-use-a-tab-key-here))
+
+(define-key
+  global-map
+  [menu-bar mymenu bmrz]
+  '("See Bookmarks" . bm-show))
