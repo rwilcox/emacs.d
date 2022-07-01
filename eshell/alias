@@ -1,3 +1,4 @@
+alias gcloudwtc gcloud config configurations list | grep True | cut -f 1 -d ' '
 alias ehist eshell-list-history
 alias to_echo message $1 > /dev/null
 alias pshic pwsh --NonInteractive -Command "$*"

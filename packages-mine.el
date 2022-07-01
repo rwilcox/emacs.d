@@ -106,3 +106,5 @@
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 (use-package highlight-indent-guides)
+
+(use-package string-inflection)

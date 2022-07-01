@@ -24,3 +24,5 @@
 (defun shift-left-region ()
   (interactive)
   (shift-region -2))
+
+(global-set-key (kbd "C-c r ~") 'string-inflection-toggle)  ; ~ maps back to Vim functionality
