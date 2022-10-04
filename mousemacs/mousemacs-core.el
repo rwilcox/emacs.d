@@ -451,9 +451,12 @@ prompt before closing."
 (use-package counsel :ensure t)
 (use-package swiper :ensure t)
 
-;; use fuzzy search
+;; use standard search
+;; ivy--regex-fuzzy will treat each character seperately
+;; so searching for "this" returns files like the_one.md or issue.md
+;; NOT what I want
 (setq ivy-re-builders-alist
-      '((t . ivy--regex-fuzzy)))
+      '((t . ivy--regex-plus)))
 
 ;; install smex for sorting commands
 (use-package smex
