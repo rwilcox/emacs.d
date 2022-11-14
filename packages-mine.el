@@ -9,11 +9,12 @@
 (use-package literate-calc-mode)
 (use-package swiper)
 (use-package powershell)
+
+
 (use-package wwtime)
 (use-package groovy-mode)
 
 (use-package hl-todo)
-(use-package projectile)
 
 (use-package which-key
   :config
@@ -89,6 +90,12 @@
 (use-package kotlin-mode
   :hook
   (kotlin-mode . lsp))
+
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
 
 (use-package direnv
  :config
