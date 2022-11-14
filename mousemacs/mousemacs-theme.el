@@ -14,13 +14,18 @@
 ;;(package-initialize)
 ;;(load-theme 'scintilla t)
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/mousemacs/theme"))
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/mousemacs/theme"))
-;;(load-theme 'mousemacs-yellow t)
-(load-theme 'mousemacs-default t)
+(defvar mousemacs-path
+		(concat user-emacs-directory
+        (convert-standard-filename "mousemacs")))
+
+(add-to-list 'load-path (concat mousemacs-path "theme"))
+
+(add-to-list 'custom-theme-load-path (concat mousemacs-path "theme"))
+(load-theme 'mousemacs-yellow t)
+;; (load-theme 'mousemacs-default t)
 
 ;; set default font
-(set-face-attribute 'default nil :family "Droid Sans Mono" :height 105 :weight 'normal)
+(set-face-attribute 'default nil :family "Jetbrains Mono" :height 105 :weight 'normal)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mousemacs tabbar colors

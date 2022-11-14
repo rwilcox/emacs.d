@@ -43,7 +43,7 @@
  '(highline-face ((t (:background "Grey95"))))
  '(show-paren-match-face ((t (:background "Grey80"))))
  '(region ((t (:background "Grey80"))))
- '(highlight ((t (:background "LightSkyBlue"))))
+ '(highlight ((t (:background "GhostWhite"))))
  '(secondary-selection ((t (:background "Grey55"))))
  '(widget-field-face ((t (:background "white"))))
  '(widget-single-line-field-face ((t (:background "white")))))

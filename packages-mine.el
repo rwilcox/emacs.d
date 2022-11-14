@@ -4,23 +4,17 @@
 (use-package rainbow-blocks)
 (use-package imake)
 (use-package devdocs)
-                                        ; (use-package color-theme-sanityinc-solarized)
 
-    (use-package cloud-theme
-        :ensure t
-        :config
-        (load-theme 'cloud t))
-
-; (use-package base16-theme)
 (use-package persistent-scratch)
 (use-package literate-calc-mode)
 (use-package swiper)
 (use-package powershell)
+
+
 (use-package wwtime)
 (use-package groovy-mode)
 
 (use-package hl-todo)
-(use-package projectile)
 
 (use-package which-key
   :config
@@ -96,6 +90,12 @@
 (use-package kotlin-mode
   :hook
   (kotlin-mode . lsp))
+
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
 
 (use-package direnv
  :config
