@@ -25,7 +25,7 @@
 ;; (load-theme 'mousemacs-default t)
 
 ;; set default font
-(set-face-attribute 'default nil :family "Jetbrains Mono" :height 105 :weight 'normal)
+(set-face-attribute 'default nil :family "Jetbrains Mono" :height 140 :weight 'normal)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; mousemacs tabbar colors
