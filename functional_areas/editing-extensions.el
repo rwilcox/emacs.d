@@ -26,3 +26,14 @@
   (shift-region -2))
 
 (global-set-key (kbd "C-c r ~") 'string-inflection-toggle)  ; ~ maps back to Vim functionality
+
+;; from https://chopmo.dk/2016/10/27/emacs-highlighting-current-word.html
+(require 'hi-lock)
+(defun jpt-toggle-mark-word-at-point ()
+  (interactive)
+  (if hi-lock-interactive-patterns
+      (unhighlight-regexp (car (car hi-lock-interactive-patterns)))
+    (highlight-symbol-at-point)))
+
+;; easy open up files at the point, even if they are relative paths
+(ffap-bindings)
