@@ -17,7 +17,7 @@
 (use-package hl-todo)
 (use-package magit)
 (use-package code-review)
-
+(use-package magit-todos)
 
 (use-package rg)
 
