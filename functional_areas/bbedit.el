@@ -80,6 +80,15 @@ Version 2017-11-01"
   (current-region-to-shell-file)
  )
 
+(defun bb/append-selection-to-scratch ()
+  "You've written a neat thing interactively, but save it somewhere for later so you won't forget your genius"
+  (interactive)
+  (let ((current-selection (rpw/current-region)))
+  (with-current-buffer "*scratch*"
+    (end-of-buffer)
+    (insert (concat current-selection "\n"))
+ )))
+
 
 (defun current-region-to-shell-file ()
     ; must have ln at end, but write-region by default does not

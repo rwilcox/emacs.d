@@ -15,15 +15,8 @@
 (use-package groovy-mode)
 
 (use-package hl-todo)
-
-(use-package which-key
-  :config
-  (which-key-mode)
-  (which-key-setup-side-window-bottom)
-  :custom (which-key-idle-delay 1.2))
-
-(setq which-key-popup-type 'frame)
-(setq which-key-persistent-popup t)
+(use-package magit)
+(use-package code-review)
 
 
 (use-package rg)
@@ -117,5 +110,9 @@
   (global-set-key (kbd "<left-fringe> <mouse-3>") 'bm-toggle-mouse)
   (setq bm-highlight-style "bm-highlight-only-fringe")  ;; can also be -only-line
 )
+
+(use-package yasnippet)
+(use-package yasnippet-snippets)
+(yas-global-mode 1)
 
 (use-package dash-at-point)
