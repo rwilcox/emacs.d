@@ -29,4 +29,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(header-line ((t (:background "cornsilk" :foreground "#f2f2f2" :box (:line-width 1 :color "#2f7e9d"))))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "whitesmoke" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "JetBrains Mono"))))
+ '(header-line ((t (:background "cornsilk" :foreground "#f2f2f2" :box (:line-width 1 :color "#2f7e9d")))))
+ '(highlight ((t (:background "lemon chiffon")))))
