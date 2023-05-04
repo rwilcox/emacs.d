@@ -11,6 +11,11 @@
 
 (define-key
   global-map
+  [menu-bar mymenu hcntt]
+  '("Toggle Current Text Highlighting" . jpt-toggle-mark-word-at-point)
+)
+(define-key
+  global-map
   [menu-bar mymenu dird]
   '("Reveal current buffer in dired" . dired-jump-other-window)
   )
