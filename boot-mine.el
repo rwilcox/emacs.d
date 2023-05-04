@@ -32,3 +32,10 @@
  ;; If there is more than one, they won't work right.
  '(header-line ((t (:background "cornsilk" :foreground "#f2f2f2" :box (:line-width 1 :color "#2f7e9d")))))
  )
+
+;; for compile mode to work with Typescript. Thanks compile that likes to throw ASCII codes at things...
+
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (ansi-color-apply-on-region compilation-filter-start (point-max)))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
