@@ -89,6 +89,10 @@ Version 2017-11-01"
     (insert (concat current-selection "\n"))
  )))
 
+;; from https://stackoverflow.com/a/43017001/224334
+(defun bb/reveal-in-finder ()
+  (interactive)
+  (shell-command (concat "open -R " buffer-file-name)))
 
 (defun current-region-to-shell-file ()
     ; must have ln at end, but write-region by default does not
