@@ -1,28 +1,4 @@
-(use-package markdown-mode)
-(use-package xterm-color)
-(use-package regex-tool)
-(use-package rainbow-blocks)
-(use-package imake)
-(use-package devdocs)
-
-(use-package persistent-scratch)
-(use-package literate-calc-mode)
-(use-package swiper)
-(use-package powershell)
-
-
-(use-package wwtime)
-(use-package groovy-mode)
-
-(use-package hl-todo)
-(use-package magit)
-(use-package code-review)
-(use-package magit-todos)
-
-(use-package rg)
-
 (rg-enable-default-bindings)
-(use-package plantuml-mode)
 (use-package graphviz-dot-mode
   :ensure t
   :config
@@ -90,15 +66,8 @@
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
 
-(use-package direnv
- :config
- (direnv-mode))
 
-(use-package yaml-mode)
-(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-
-(use-package highlight-indent-guides)
 
 (use-package string-inflection)
 (use-package bm
@@ -111,8 +80,4 @@
   (setq bm-highlight-style "bm-highlight-only-fringe")  ;; can also be -only-line
 )
 
-(use-package yasnippet)
-(use-package yasnippet-snippets)
 (yas-global-mode 1)
-
-(use-package dash-at-point)
