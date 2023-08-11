@@ -5,3 +5,4 @@ alias pshic pwsh --NonInteractive -Command "$*"
 alias win_pshic Powershell -Command "$*"
 alias bb find-file $1
 alias esh . $1
+alias huh echo $?
