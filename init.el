@@ -1,7 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(package-initialize)
-
 (defvar mousemacs-path
 		(concat user-emacs-directory
         (convert-standard-filename "mousemacs/")))

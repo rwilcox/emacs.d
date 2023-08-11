@@ -32,7 +32,7 @@
                          ("melpa-stable"     . "https://stable.melpa.org/packages/")
                          ))
 
-(package-initialize) ; guess what this one does ?
+;; (package-initialize) ; guess what this one does ?
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package) ; unless it is already installed
