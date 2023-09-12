@@ -9,7 +9,9 @@
 ; in my setup these are named machine-configs/machine-name-any-dot-here-are-replaced-with-dashes-config.el
 (require (intern (replace-regexp-in-string (regexp-quote "\.") "-" (format "%s-config" system-name))))
 
-  (setq-default mode-line-format
+
+
+(setq-default mode-line-format
           (list
            ;; value of `mode-name'
            " %m: "
@@ -18,8 +20,9 @@
            ;; value of current line number
            "@ L: %l C: %C "
            "(%Z)"
-          ))
-
+            '(:eval (if (equal (car timeclock-last-event) "i") (format-time-string " IN @ %-I:%M %p"
+					(nth 1 timeclock-last-event))))
+))
 
 
 (setq company-idle-delay nil)
