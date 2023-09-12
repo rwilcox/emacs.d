@@ -37,3 +37,8 @@
 
 ;; easy open up files at the point, even if they are relative paths
 (ffap-bindings)
+
+
+; for the mark and go back package detour
+(global-set-key [(control \.)] 'detour-mark)
+(global-set-key [(control \,)] 'detour-back)
