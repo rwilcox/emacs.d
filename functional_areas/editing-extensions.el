@@ -38,7 +38,8 @@
 ;; easy open up files at the point, even if they are relative paths
 (ffap-bindings)
 
-
+(require 'detour)
 ; for the mark and go back package detour
-(global-set-key [(control \.)] 'detour-mark)
-(global-set-key [(control \,)] 'detour-back)
+; / and = are beside each other on the dvorak keyboard
+(global-set-key [(control \/)] 'detour-mark)
+(global-set-key [(control \=)] 'detour-back)
