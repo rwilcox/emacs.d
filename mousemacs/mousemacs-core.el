@@ -207,8 +207,10 @@
 (put 'upcase-region 'disabled nil)
 
 ;; line numbers
-(global-linum-mode t)
-(setq linum-format " %3d ")
+(global-display-line-numbers-mode 1)
+;; TODO: needs Emacs 29 replament
+; (global-linum-mode t)
+; (setq linum-format " %3d ")
 
 ;; reload a file if changed in external program
 ;(global-auto-revert-mode t)
