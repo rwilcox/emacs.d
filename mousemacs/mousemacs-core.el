@@ -528,6 +528,8 @@ prompt before closing."
 (tool-bar-add-item "home" 'dired-sidebar-toggle-sidebar
                'Files
                :help   "Toggle File Explorer")
+(setq dired-sidebar-window-fixed 'height)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Tabbar for mousemacs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
