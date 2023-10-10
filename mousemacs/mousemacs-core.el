@@ -528,7 +528,11 @@ prompt before closing."
 (tool-bar-add-item "home" 'dired-sidebar-toggle-sidebar
                'Files
                :help   "Toggle File Explorer")
-(setq dired-sidebar-window-fixed 'height)
+(setq dired-sidebar-window-fixed 'null)
+; (setq dired-sidebar-window-fixed 'height)
+; ^^^ no means Ido (fancy/better completion winibuffer thing) will not
+; work properly
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Tabbar for mousemacs
