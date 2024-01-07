@@ -38,6 +38,9 @@
 ;; easy open up files at the point, even if they are relative paths
 (ffap-bindings)
 
+;; https://www.emacswiki.org/emacs/AutoIndentation
+(electric-indent-mode 1)
+
 (require 'detour)
 ; for the mark and go back package detour
 ; / and = are beside each other on the dvorak keyboard
