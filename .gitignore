@@ -12,3 +12,4 @@ var/
 session.*
 url/cache/*
 .cache/*
+tree-sitter/*

@@ -13,6 +13,9 @@
 (require 'java-config-mine)
 (require 'editing-extensions)
 (require 'window-extensions)
+(require 'treesitter-mine)
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 3))) ;; one - well, 3 -  line at a time

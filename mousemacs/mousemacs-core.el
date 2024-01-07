@@ -207,8 +207,10 @@
 (put 'upcase-region 'disabled nil)
 
 ;; line numbers
-(global-linum-mode t)
-(setq linum-format " %3d ")
+(global-display-line-numbers-mode 1)
+;; TODO: needs Emacs 29 replament
+; (global-linum-mode t)
+; (setq linum-format " %3d ")
 
 ;; reload a file if changed in external program
 ;(global-auto-revert-mode t)
@@ -526,6 +528,12 @@ prompt before closing."
 (tool-bar-add-item "home" 'dired-sidebar-toggle-sidebar
                'Files
                :help   "Toggle File Explorer")
+(setq dired-sidebar-window-fixed 'null)
+; (setq dired-sidebar-window-fixed 'height)
+; ^^^ no means Ido (fancy/better completion winibuffer thing) will not
+; work properly
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Tabbar for mousemacs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
