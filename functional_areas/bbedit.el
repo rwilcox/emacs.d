@@ -34,6 +34,14 @@ Version 2017-11-01"
   (shell-command-on-region (region-beginning) (region-end) (read-string "Command to execute: ") "current buffer" t))
 
 
+(defun bb/script-eval-selected-inserting-result ()
+  "run a shell command here, inserting the result. Unlike M-| uses selected region as command. Does NOT use eshell"
+  (interactive)
+  (let ((selected (rpw/current-region)))
+    (newline-and-indent)
+    (save-excursion (insert (shell-command-to-string selected)))
+))
+
 (defun bb/script-eval-selected-in-eshell ()
   "Like BBEdit's script functionality, but (a) command is selected at runtime by looking at the region. Either switch to the eshell buffer OR use the fancy eshell redirection properties to get the output out."
   (interactive)
@@ -56,7 +64,7 @@ Version 2017-11-01"
      (interactive)
      (run-this-in-eshell (rpw/current-region)))
 
-(defun bbedit/script-result-here-native ()
+(defun bb/script-result-here-native ()
  "executes native - not eshell - command and puts result in current buffer
   aka macros version of https://stackoverflow.com/a/12306709"
   (interactive)
