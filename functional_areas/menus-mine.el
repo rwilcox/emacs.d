@@ -10,6 +10,11 @@
   'tools )
 
 (define-key
+ global-map
+ [menu-bar mymenu htbc]
+ '("Toggle Toolbar" . tool-bar-mode))
+
+(define-key
   global-map
   [menu-bar mymenu hcntt]
   '("Toggle Current Text Highlighting" . jpt-toggle-mark-word-at-point)
