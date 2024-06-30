@@ -28,3 +28,9 @@
 (setq company-idle-delay nil)
 (global-set-key (kbd "C-.") 'company-complete)
 (global-set-key (kbd "C-x C-b") 'ibuffer)  ; UMMM YES No more buffer-mode
+
+
+
+
+
+(provide 'boot-after-packages)

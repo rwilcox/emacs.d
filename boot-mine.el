@@ -14,6 +14,8 @@
 (require 'editing-extensions)
 (require 'window-extensions)
 (require 'treesitter-mine)
+(require 'helm-mine)
+
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
