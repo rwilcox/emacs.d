@@ -177,8 +177,11 @@
 ;; set default mode for new buffers to text
 (setq-default major-mode 'text-mode)
 
-;: toggle wrapping text at the 80th character
-(setq default-fill-column 80)
+;: toggle wrapping text at the 100th character
+(setq default-fill-column 100)
+
+;; if you turn on display-fill-column-indicator-mode get the Philip bar
+(setopt display-fill-column-indicator-column 100)
 
 ; hide splash screen
 ; (setq inhibit-startup-message t)
