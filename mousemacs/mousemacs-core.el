@@ -77,7 +77,8 @@
 (use-package auto-compile :ensure t)
 
 (setq load-prefer-newer t)
-(package-initialize)
+(unless (>= emacs-major-version 27)
+  (package-initialize))
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
