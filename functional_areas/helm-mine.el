@@ -5,7 +5,9 @@
 (require 'helm-for-files)
 ;; ^^ else helm-source-recentf may be nil in rpw/any if you haven't done a helm command already
 
-(helm-mode 1)
+;(helm-mode 1)
+; ^^ NO. turning this on puts Helm in places I don't want (including maybe the MacOS behavior for Visit New File???) WD-rpw 07-03-2024
+
 (setq helm-move-to-line-cycle-in-source nil)
   ; https://github.com/emacs-helm/helm/issues/2623#issuecomment-1788592487
 
