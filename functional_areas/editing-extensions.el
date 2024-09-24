@@ -46,3 +46,19 @@
 ; / and = are beside each other on the dvorak keyboard
 (global-set-key [(control \/)] 'detour-mark)
 (global-set-key [(control \=)] 'detour-back)
+
+
+ (require 'goto-chg)
+; (goto-last-change)
+
+(defun rpw/send-region-to-scratch ()
+  "Send the current selection (region) to the *scratch* buffer."
+  (interactive)
+  (if (use-region-p)  ;; Check if there is an active region
+      (let ((selected-text (buffer-substring-no-properties (region-beginning) (region-end))))
+        (with-current-buffer "*scratch*"
+          (goto-char (point-max))  ;; Move to the end of the *scratch* buffer
+          (insert selected-text)    ;; Insert the selected text
+          (insert "\n"))            ;; Add a newline for separation
+        (deactivate-mark))          ;; Deactivate the region
+    (message "No text selected.")))  ;; Message if no region is selected

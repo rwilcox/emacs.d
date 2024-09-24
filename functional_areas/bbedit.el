@@ -42,6 +42,23 @@ Version 2017-11-01"
     (save-excursion (insert (shell-command-to-string selected)))
 ))
 
+(defun bb/elisp-eval-selected-inserting-result ()
+  "Evaluate the Elisp code in the current region and replace the region with the result."
+  (interactive)
+  (let ((value (eval (car (read-from-string (buffer-substring (region-beginning) (region-end)))))))
+    (delete-region (region-beginning) (region-end))
+    (insert (format "%s" value)))
+)
+
+(defun bb/elisp-eval-selected-inserting-result-no-delete ()
+  "Evaluate the Elisp code in the current region and replace the region with the result."
+  (interactive)
+  (let ((value (eval (car (read-from-string (buffer-substring (region-beginning) (region-end)))))))
+    ;(delete-region (region-beginning) (region-end))
+    (insert (format "\n%s" value)))
+)
+
+
 (defun bb/script-eval-selected-in-eshell ()
   "Like BBEdit's script functionality, but (a) command is selected at runtime by looking at the region. Either switch to the eshell buffer OR use the fancy eshell redirection properties to get the output out."
   (interactive)
