@@ -10,3 +10,9 @@
 (setq lsp-clients-kotlin-server-executable "/Users/aias/bin/install/server/bin/kotlin-language-server")
 
 (setq rg-executable "/opt/local/bin/rg")
+
+
+(org-babel-do-load-languages 'org-babel-load-languages
+                             (append org-babel-load-languages
+                              '((shell     . t)
+                               )))
