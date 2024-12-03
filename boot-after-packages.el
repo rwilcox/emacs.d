@@ -21,7 +21,11 @@
            "@ L: %l C: %C "
            "(%Z)"
             '(:eval (if (equal (car timeclock-last-event) "i") (format-time-string " IN @ %-I:%M %p"
-					(nth 1 timeclock-last-event))))
+					                                           (nth 1 timeclock-last-event))))
+            '(:eval (if (bound-and-true-p lsp-mode)
+                           (propertize " | LSP: On" 'face '(:foreground "green"))
+                         (propertize " | LSP: Off" 'face '(:foreground "red"))))
+
 ))
 
 

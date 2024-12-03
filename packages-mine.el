@@ -80,4 +80,23 @@
   (setq bm-highlight-style "bm-highlight-only-fringe")  ;; can also be -only-line
 )
 
+(package-vc-install "https://github.com/JasZhe/hurl-mode")
+(use-package hurl-mode :mode "\\.hurl\\'")
+
 (yas-global-mode 1)
+
+(use-package selected-window-accent-mode
+  :config (selected-window-accent-mode 1)
+  :custom
+  (selected-window-accent-fringe-thickness 6)
+  ;(selected-window-accent-percentage-darken 20)
+  ;(selected-window-accent-percentage-desaturate 20)
+  ;(selected-window-accent-smart-borders t)
+  ;(selected-window-accent-tab-accent nil)
+  ;(selected-window-accent-custom-color "nil")
+  ; (selected-window-accent-mode-style 'subtle) ; <-- tried it, NO. RPW 10-24-2024
+  ;(selected-window-accent-foreground-adjust-factor 0.1)
+  ;(selected-window-accent--use-complementary-color nil)
+  ;(selected-window-accent--foreground-invert-state nil)
+                                        ;(selected-window-accent--foreground-offset 0))
+  )

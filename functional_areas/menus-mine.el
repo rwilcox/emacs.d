@@ -91,3 +91,8 @@
   global-map
   [menu-bar mymenu bmrz]
   '("See Bookmarks" . bm-show))
+
+(define-key
+  global-map
+  [menu-bar mymenu rpwa]
+  '("RPW ANY" . rpw/any))
