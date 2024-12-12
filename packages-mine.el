@@ -100,3 +100,9 @@
   ;(selected-window-accent--foreground-invert-state nil)
                                         ;(selected-window-accent--foreground-offset 0))
   )
+
+(use-package fancy-compilation
+  :commands (fancy-compilation-mode))
+
+(with-eval-after-load 'compile
+  (fancy-compilation-mode))
