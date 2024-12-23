@@ -22,3 +22,9 @@
 ;; eos/eshell-truncate-timer)'
 (setq eos/eshell-truncate-timer
       (run-with-idle-timer 5 t #'eos/truncate-eshell-buffers))
+
+
+; yes this is technically shell mode, I'm just dumping this here for now
+(define-key shell-mode-map (kbd "<up>") 'comint-previous-input)
+
+(define-key shell-mode-map (kbd "<down>") 'comint-next-input)
