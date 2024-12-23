@@ -62,3 +62,7 @@
           (insert "\n"))            ;; Add a newline for separation
         (deactivate-mark))          ;; Deactivate the region
     (message "No text selected.")))  ;; Message if no region is selected
+
+(require 'mwim)
+(global-set-key (kbd "C-a") 'mwim-beginning)
+(global-set-key (kbd "C-e") 'mwim-end)

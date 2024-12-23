@@ -1,3 +1,4 @@
+
 alias b bash -c "$1"
 alias gcloudwtc gcloud config configurations list | grep True | cut -f 1 -d ' '
 alias ehist eshell-list-history
@@ -8,3 +9,4 @@ alias bb find-file $1
 alias esh . $1
 alias huh echo $?
 alias nx npm exec -c "$*"
+alias cy npx corepack install

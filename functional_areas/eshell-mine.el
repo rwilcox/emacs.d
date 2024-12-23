@@ -28,3 +28,25 @@
 (define-key shell-mode-map (kbd "<up>") 'comint-previous-input)
 
 (define-key shell-mode-map (kbd "<down>") 'comint-next-input)
+
+; now back to regularly scheduled eshell
+
+(defun open-file-at-line (file line)
+  "Open FILE and go to LINE."
+  (interactive "fFile: \nNLine: ")
+  (find-file file)        ;; Open the specified file
+  (goto-line line))       ;; Move to the specified line
+
+
+;; bbl is meant to mirror my bb eshell alias (which just aliases find-file in eshell)
+;; except this one opens file:line specifications!
+(defun bbl (filepath-and-line)
+  "Open the file specified in FILEPATH-AND-LINE:LINE_NUMBER and go to the specified line number.
+FILEPATH-AND-LINE should be in the format 'filepath:line-number'."
+  (interactive "sEnter filepath:line-number: ")
+  (let* ((parts (split-string filepath-and-line ":"))  ;; Split the input string
+         (file (car parts))                             ;; Get the file path
+         (line (if (cadr parts)                         ;; Get the line number if it exists
+                    (string-to-number (cadr parts))  ;; Convert to number
+                  1)))                                ;; Default to line 1 if not specified
+    (open-file-at-line file line)))                    ;; Call the previously defined function
