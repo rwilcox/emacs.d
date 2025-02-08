@@ -129,3 +129,11 @@ Version 2017-11-01"
 
 (defun current-region-to-shell-file ()
  (write-region (region-beginning) (region-end) "/tmp/current-region"))
+
+(defun bb/mac-to-unix-lineendings (start end)
+  "Replace Mac CRs with Unix newlines in the current region."
+  (interactive "r")
+  (save-excursion
+    (goto-char start)
+    (while (re-search-forward "\r" end t)
+      (replace-match "\n" nil t))))
