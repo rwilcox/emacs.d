@@ -66,3 +66,11 @@
 (require 'mwim)
 (global-set-key (kbd "C-a") 'mwim-beginning)
 (global-set-key (kbd "C-e") 'mwim-end)
+
+(defun rpw/ffar-other-window ()
+  "Open the file path at point or in the current selection in another window."
+  (interactive)
+  (let ((file-path (if (use-region-p)
+                       (buffer-substring-no-properties (region-beginning) (region-end))
+                     (thing-at-point 'filename))))
+    (find-file-other-window (expand-file-name (string-trim file-path)))))
