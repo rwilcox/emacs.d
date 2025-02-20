@@ -13,3 +13,5 @@ session.*
 url/cache/*
 .cache/*
 tree-sitter/*
+eln-cache/*
+.DS_Store*
