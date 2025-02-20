@@ -5,6 +5,7 @@
 (require 'python-mine)
 (require 'wwtime-mine)
 (require 'eglot-mine)
+(require 'org-extensions-mine)
 
 ; sometimes machines have specific configs, meaning locations of supporting binaries etc etc
 ; in my setup these are named machine-configs/machine-name-any-dot-here-are-replaced-with-dashes-config.el
