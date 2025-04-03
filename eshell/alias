@@ -10,3 +10,6 @@ alias esh . $1
 alias huh echo $?
 alias nx npm exec -c "$*"
 alias cy npx corepack install
+alias fn fnm exec --version-file-strategy=recursive $*
+alias fnode fnm exec --version-file-strategy=recursive node $*
+alias fnpm fnm exec --version-file-strategy=recursive npm $*
