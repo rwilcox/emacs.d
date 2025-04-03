@@ -4,6 +4,8 @@
   :config
   (setq graphviz-dot-indent-width 4))
 
+(use-package detour)
+
 (use-package lsp-mode
   :ensure
   :commands lsp
