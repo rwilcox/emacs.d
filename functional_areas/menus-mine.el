@@ -11,6 +11,16 @@
 
 (define-key
  global-map
+ [menu-bar mymenu twpb]
+ '("Toggle Philip Bar" . display-fill-column-indicator-mode))
+
+(define-key
+ global-map
+ [menu-bar mymenu twtb]
+ '("Toggle (Window) Tab Bar" . tab-line-mode))
+
+(define-key
+ global-map
  [menu-bar mymenu htbc]
  '("Toggle Toolbar" . tool-bar-mode))
 
