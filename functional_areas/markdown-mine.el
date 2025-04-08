@@ -16,3 +16,16 @@
   (markdown-outline-next-same-level)
   (markdown-narrow-to-subtree)
 )
+
+(defun rpw/markdown-move-completed-todos-to-bottom ()
+  "Move completed Markdown TODO items to the bottom of the buffer."
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (let ((completed-todos nil))
+      (while (re-search-forward "^\s*-\s*\\[x\\].*$" nil t)
+        (push (buffer-substring (match-beginning 0) (match-end 0)) completed-todos)
+        (delete-region (match-beginning 0) (match-end 0)))
+      (goto-char (point-max))
+      (while completed-todos
+        (insert (pop completed-todos) "\n")))))
