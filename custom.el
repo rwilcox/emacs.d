@@ -19,6 +19,11 @@
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(package-selected-packages
    '(helm-ls-git helm-git helm-project helm ztree goto-chg fold-this detour restclient vim-empty-lines-mode bind-key company dash flycheck ivy js2-mode packed s transient rust-mode laas plantuml-mode hl-todo projectile racket-mode undo-tree xterm-color xref-js2 which-key web-mode vlf use-package tabbar switch-window spaceline smex regex-tool rainbow-delimiters rainbow-blocks powershell popwin popup-edit-menu persistent-scratch no-littering neotree markdown-mode literate-calc-mode json-mode js2-refactor imenu-anywhere imake hlinum groovy-mode flycheck-pos-tip exec-path-from-shell devdocs crux counsel company-web color-theme-sanityinc-solarized beacon base16-theme autopair auto-compile async wtime magit code-review magit-todos rg graphviz-dot-mode kotlin-mode direnv yaml-mode highlight-indent-guides yasnippet yasnippet-snippets dash-at-point)))
+ '(dired-sidebar-theme 'vscode)
+ '(package-selected-packages '(dired-gitignore hurl-mode vscode-icon))
+ '(package-vc-selected-packages
+   '((hurl-mode :vc-backend Git :url
+                "https://github.com/JasZhe/hurl-mode"))))
 
  '(speedbar-supported-extension-expressions
    (quote
