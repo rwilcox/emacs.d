@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: viPlayground
+# key: viPlayground
+# --
+
+try {
+     `yas-selected-text`
+} catch (e) {
+  screen.logTestingPlaygroundURL()
+  throw e
+}
