@@ -20,3 +20,18 @@
   (split-window (if arg (frame-root-window)
                   (window-parent (selected-window)))
                 nil 'right nil))
+
+(defun rpw/switch-to-window-with-buffer (buffer-name)
+  "Switch to the window displaying the BUFFER-NAME."
+  (interactive
+   (list (completing-read "Buffer name: "
+                          (mapcar 'buffer-name (buffer-list)))))
+  (let ((buf (get-buffer buffer-name)))
+    (if buf
+        (let ((window (get-buffer-window buf)))
+          (if window
+              (select-window window)
+            (message "No window displaying buffer: %s" buffer-name)))
+      (message "No buffer with name: %s" buffer-name))))
+
+(global-set-key (kbd "C-c r b") 'rpw/switch-to-window-with-buffer)
