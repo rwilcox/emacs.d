@@ -63,6 +63,17 @@
         (deactivate-mark))          ;; Deactivate the region
     (message "No text selected.")))  ;; Message if no region is selected
 
+
+(defun rpw/send-region-to (start end)
+  "Append the current region to a selected buffer."
+  (interactive "r")
+  (let ((region (buffer-substring-no-properties start end))
+        (target-buffer (read-buffer "Append to buffer: ")))
+    (with-current-buffer target-buffer
+      (goto-char (point-max))
+      (insert region))))
+
+
 (require 'mwim)
 (global-set-key (kbd "C-a") 'mwim-beginning)
 (global-set-key (kbd "C-e") 'mwim-end)
