@@ -7,6 +7,15 @@
 ;
 ; These are also non-interactive, which may or may not be what you want
 
+(defun jdk-21-development()
+  "Setup our Java 21 paths and env variables correctly"
+  (interactive)
+
+  (setenv "JAVA_HOME" java-21-home)
+  (setenv "PATH" (concat java-21-binpath (getenv "PATH") ) )
+  (setq eshell-path-env (concat java-21-binpath eshell-path-env) )
+)
+
 (defun jdk-11-development()
   "Setup our Java 11 paths and env variables correctly"
   (interactive)
