@@ -24,9 +24,6 @@
            "(%Z)"
             '(:eval (if (equal (car timeclock-last-event) "i") (format-time-string " IN @ %-I:%M %p"
 					                                           (nth 1 timeclock-last-event))))
-            '(:eval (if (bound-and-true-p lsp-mode)
-                           (propertize " | LSP: On" 'face '(:foreground "green"))
-                         (propertize " | LSP: Off" 'face '(:foreground "red"))))
 
 ))
 
@@ -36,7 +33,7 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)  ; UMMM YES No more buffer-mode
 
 
-
+(context-menu-mode)
 
 
 (provide 'boot-after-packages)
