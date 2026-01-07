@@ -85,3 +85,13 @@
                        (buffer-substring-no-properties (region-beginning) (region-end))
                      (thing-at-point 'filename))))
     (find-file-other-window (expand-file-name (string-trim file-path)))))
+
+(defun rpw/pretty ()
+  "Format the current buffer using Prettier via fnm."
+  (interactive)
+  (let ((file-path (buffer-file-name)))
+    (if file-path
+        (let ((command (format "fnm exec --version-file-strategy=recursive npx prettier --write %s" file-path)))
+          (shell-command command)
+          (revert-buffer t t))  ;; Optionally, revert the buffer to reflect changes
+      (message "Buffer is not visiting a file."))))

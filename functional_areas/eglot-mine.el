@@ -12,3 +12,7 @@
   "Return non-nil if Eglot is active in the current buffer."
   (interactive)
   (message (rpw/eglot-status-str)))
+
+
+; control-shift .
+(global-set-key (kbd "C->") 'eglot-code-actions)

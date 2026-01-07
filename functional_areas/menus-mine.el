@@ -89,6 +89,11 @@
 
 (define-key
   global-map
+  [menu-bar mymenu jdktne]
+  '("Use JDK 21" . jdk-21-development))
+
+(define-key
+  global-map
   [menu-bar mymenu keysz]
   '("Minor Mode Keys" . which-key-show-major-mode))
 
