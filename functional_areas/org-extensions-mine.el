@@ -7,3 +7,16 @@
   (org-babel-previous-src-block)
   (org-babel-remove-result)
 )
+
+(defun rpw/agenda-reload-files ()
+  "Revert all buffers associated with org-agenda files."
+  (interactive)
+  (let ((agenda-files (org-agenda-files)))
+    (dolist (file agenda-files)
+      (let ((buf (find-buffer-visiting file)))
+        (if buf
+            (with-current-buffer buf
+              (revert-buffer t t)
+              (message "Reverted: %s" file))
+          (message "Not open: %s" file))))
+    (message "Done reverting org-agenda files!")))
