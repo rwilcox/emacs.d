@@ -1,5 +1,7 @@
 (provide 'org-extensions-mine)
 
+(require 'org-capture)
+
 (defun org/send-babel-results-to-scratch ()
   "given the selection - which is assumed to be part of an org babel results block - move it to *scratch* buffer and delete the org babel results block"
   (interactive)
@@ -20,3 +22,11 @@
               (message "Reverted: %s" file))
           (message "Not open: %s" file))))
     (message "Done reverting org-agenda files!")))
+
+; allows me to capture a url, likely already formatted, and add a description
+; (potential Workona replacement)
+(add-to-list 'org-capture-templates
+             '("U" "URL capture clipboard" entry
+               (file+olp+datetree "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/inbox.org")
+               "* %c    :links:%^G\n%?\n\n"
+               :empty-lines-after 1))
