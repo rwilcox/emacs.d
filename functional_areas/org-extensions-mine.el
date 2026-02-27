@@ -27,6 +27,6 @@
 ; (potential Workona replacement)
 (add-to-list 'org-capture-templates
              '("U" "URL capture clipboard" entry
-               (file+olp+datetree "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/inbox.org")
+               (file+headline "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/inbox.org" "LINKS")
                "* %c    :links:%^G\n%?\n\n"
                :empty-lines-after 1))
