@@ -137,3 +137,8 @@ Version 2017-11-01"
     (goto-char start)
     (while (re-search-forward "\r" end t)
       (replace-match "\n" nil t))))
+
+(defun bb/align-equals ()
+  "Aligns equal signs in the active region."
+  (interactive)
+  (align-regexp (region-beginning) (region-end) "\\(\\s-*\\)=" 1 1))
