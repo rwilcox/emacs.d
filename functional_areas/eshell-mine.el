@@ -50,3 +50,69 @@ FILEPATH-AND-LINE should be in the format 'filepath:line-number'."
                     (string-to-number (cadr parts))  ;; Convert to number
                   1)))                                ;; Default to line 1 if not specified
     (open-file-at-line file line)))                    ;; Call the previously defined function
+
+
+; eshell: certain directories I need to remind myself the setup is too magical for eshell
+ ; for example directories that deeply use/Python and Python venvs with no manual control for me
+; in this case, allow me to place a ".eshell-warn" file to notify my future self to switch to normal
+; shell mode (or ghostel or whatever)
+; ... mostly generated via LLM, (but it seems to work, theoretically...)
+  (defvar rpw/eshell-default-prompt-function nil
+    "Stock eshell prompt before warn customization.")
+
+  (defvar-local rpw/eshell-warn-dir nil
+    "Directory containing .eshell-warn for current eshell buffer, if any.")
+
+  (defun rpw/eshell-warn-message (warn-dir)
+    "Show warning from .eshell-warn in WARN-DIR."
+    (let ((msg (string-trim
+                (with-temp-buffer
+                  (insert-file-contents (expand-file-name ".eshell-warn" warn-dir))
+                  (buffer-string)))))
+      (when (string-empty-p msg)
+        (setq msg (format "Warning: entered %s" warn-dir)))
+      (minibuffer-message (format "⚠ %s" msg) 8)
+      (ding)))
+
+  (defun rpw/eshell-warn-on-cd ()
+    "Warn and update prompt state when entering a .eshell-warn directory."
+    (setq rpw/eshell-warn-dir
+          (locate-dominating-file default-directory ".eshell-warn"))
+    (when rpw/eshell-warn-dir
+      (rpw/eshell-warn-message rpw/eshell-warn-dir)))
+
+  (defun rpw/eshell-warn-on-open ()
+    "Warn on eshell startup if already in a .eshell-warn directory."
+    (rpw/eshell-warn-on-cd))
+
+  (defun rpw/eshell-default-prompt ()
+    "Stock Emacs 30 eshell prompt."
+    (concat (abbreviate-file-name (eshell/pwd))
+            (unless (eshell-exit-success-p)
+              (format " [%d]" eshell-last-command-status))
+            (if (= (file-user-uid) 0) " # " " $ ")))
+
+  (defun rpw/eshell-prompt ()
+    "Eshell prompt with warning prefix when under a .eshell-warn directory."
+    (let ((base (if rpw/eshell-default-prompt-function
+                    (funcall rpw/eshell-default-prompt-function)
+                  (rpw/eshell-default-prompt)))
+          (warn-dir (or rpw/eshell-warn-dir
+                        (locate-dominating-file default-directory ".eshell-warn"))))
+      (if warn-dir
+          (propertize (concat "⚠ " base) 'face 'warning)
+        base)))
+
+  (defun rpw/eshell-warn-setup ()
+    "Install eshell warn hooks and custom prompt."
+    (unless rpw/eshell-default-prompt-function
+      (when (boundp 'eshell-prompt-function)
+        (setq rpw/eshell-default-prompt-function eshell-prompt-function)))
+
+    (setq eshell-prompt-function #'rpw/eshell-prompt)
+
+    (add-hook 'eshell-directory-change-hook #'rpw/eshell-warn-on-cd)
+    (add-hook 'eshell-mode-hook #'rpw/eshell-warn-on-open))
+
+  (with-eval-after-load "em-prompt"
+    (rpw/eshell-warn-setup))
